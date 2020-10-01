@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>STORK</title>
+  </head>
+  <body>
+    <header class="section header">
+      <h1 class="header__title">Телефонная книга</h1>
+    </header>
+
+    <section class="section controls">
+      <form class="controls__filed search">
+        <label class="search__label" for="search-contact"></label>
+        <input
+          class="search__input"
+          id="search-contact"
+          type="search"
+          placeholder="Поиск по контактам"
+        />
+      </form>
+
+      <button class="button button--new" tabindex="0">Добавить новый контакт</button>
+    </section>
+    <section class="section contacts">
+      <div class="contacts__wrapper">
+        <h2 class="app__title">Список контактов</h2>
+        <button class="button button--refresh"></button>
+      </div>
+
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <p>Имя</p>
+          <p>Почта</p>
+          <p>Телефон</p>
+        </li>
+      </ul>
+    </section>
+    <section class="create-contact hide">
+      <h1>Создать контакт</h1>
+      <form class="create-contact__form">
+        <input
+          type="text"
+          name="name"
+          minlength="3"
+          maxlength="32"
+          placeholder="Имя Фамилия"
+          required
+        />
+        <input
+          type="tel"
+          name="phone"
+          pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+          minlength="16"
+          maxlength="16"
+          placeholder="+7(900)000-00-00"
+          required
+        />
+        <input type="email" name="email" placeholder="Электронная почта" required />
+        <button type="submit" class="button button--submit">Добавить контакт</button>
+      </form>
+    </section>
+  </body>
+  <script src="js/bundle.js"></script>
+</html>
